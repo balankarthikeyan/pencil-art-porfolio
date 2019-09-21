@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Layout } from '../layout'
-import { Header, Portfolio, About, Contact } from '../components'
+import { Header, About, Contact } from '../components'
 const StyledStaticBanner = styled.img`
   width: 100%;
 `
@@ -13,7 +13,6 @@ const HomePage = props => {
     <Layout title={title}>
       <Header />
       <StyledStaticBanner src="//ntryogep.sirv.com/pencil-sketch/banner_01.jpg" />
-      <Portfolio />
       <About />
       <Contact />
     </Layout>
