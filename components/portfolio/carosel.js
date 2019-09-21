@@ -1,6 +1,6 @@
 import React from "react";
 import { Main } from "./styled";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled, { css } from "styled-components";
 import fetch from "node-fetch";
 import { StyledImageKit, StyledDescription, StyledCarosel } from "./styled";
