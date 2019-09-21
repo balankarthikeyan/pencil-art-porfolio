@@ -1,11 +1,11 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { media } from '../../styles'
+import { media } from '../styles'
 /*
  */
 
 const StyledFooter = styled.footer`
-  background: #4b23fb;
+  background: #000;
   color: white;
   font-size: 12px;
   font-weight: 300;

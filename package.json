@@ -1,5 +1,5 @@
 {
-  "name": "heroku-nextjs",
+  "name": "bksketchbook",
   "version": "1.0.0",
   "description": "Deploy Next.js server-side React apps to Heroku",
   "scripts": {
@@ -17,10 +17,6 @@
   ],
   "author": "bk",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mars/heroku-nextjs/issues"
-  },
-  "homepage": "https://github.com/mars/heroku-nextjs#readme",
   "dependencies": {
     "next": "^8.0.3",
     "react": "^16.8.6",
