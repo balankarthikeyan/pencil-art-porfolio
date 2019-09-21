@@ -2,31 +2,28 @@
   "name": "heroku-nextjs",
   "version": "1.0.0",
   "description": "Deploy Next.js server-side React apps to Heroku",
-  "requires": true,
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT"
   },
-  "dependencies": {
-    "next": "^8.0.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "4.2.0",
-    "react-responsive-carousel": "3.1.49",
-    "react-masonry-component": "6.2.1",
-    "node-fetch": "2.3.0",
-    "@zeit/next-css": "1.0.1"
+  "engines": {
+    "node": "10"
   },
   "keywords": [
     "react",
     "ssr",
     "server-side-rendering"
   ],
-  "engines": {
-    "node": "10"
+  "author": "Mars Hall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mars/heroku-nextjs/issues"
   },
-  "devDependencies": {
-    "babel-plugin-styled-components": "1.8.0"
+  "homepage": "https://github.com/mars/heroku-nextjs#readme",
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

@@ -1,111 +1,68 @@
-# Next.js
+#  [Next.js](https://nextjs.org/) on Heroku
 
-In this example we will be deploying a simple "Hello World" example with Next.js.
+Deploy [React](https://facebook.github.io/react/)-based universal web apps on [Heroku](https://www.heroku.com/home).
 
+**Demo deployment** from this repo:  
+https://nextjs.herokuapp.com
 
-# Publishing: now alias https://myresumebk-git-master.karthimailu.now.sh balankarthikeyan
+**A custom Node/Express server** is supported. Use it to:
 
-### Getting started with Next.js
+* combine a Node API with a Next/React UI
+* implement custom URL routes
 
-- Create a `pages` folder with an `index.js` file with the following code:
+▶️ **[Next with custom Express server](https://github.com/mars/heroku-nextjs-custom-server-express)**
 
-```jsx
-import Link from "next/link";
-import Header from "../components/header";
+## Requires
 
-export default () => (
-  <main>
-    <Header />
-    <section>
-      <Link href="/about">
-        <a>Go to About Me</a>
-      </Link>
-    </section>
-  </main>
-);
-```
+* Heroku
+  * [command-line tools (CLI)](https://devcenter.heroku.com/articles/heroku-command-line)
+  * [a free account](https://signup.heroku.com)
+* [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+* [Node.js](https://nodejs.org)
+* [Next.js](https://github.com/zeit/next.js)
 
-- Now lets create an `about.js` file inside the `pages` folder with the following code:
+## Production deployment
 
-```jsx
-import { Component } from "react";
-import Link from "next/link";
-import Header from "../components/header";
+Once you have a [Next app working locally](https://nextjs.org/docs/#setup), you may deploy it for public access.
 
-class AboutPage extends Component {
-  static getInitialProps() {
-    const isServer = typeof window === "undefined";
-    return { isServer };
-  }
+1. Revise the `npm start` script to set the [web listener `$PORT`](https://devcenter.heroku.com/articles/dynos#local-environment-variables):
 
-  render() {
-    return (
-      <main>
-        <Header />
-        <section>
-          <p>
-            This is another page of the SSR example, you accessed it{" "}
-            <strong>{this.props.isServer ? "server" : "client"} side</strong>.
-          </p>
-          <p>
-            You can reload to see how the page change.
-          </p>
-          <Link href="/">
-            <a>Go to Home</a>
-          </Link>
-        </section>
-      </main>
-    );
-  }
-}
+   Merge this entry into **package.json**:
 
-export default AboutPage;
-```
+   ```json
+   {
+     "scripts": {
+       "dev": "next",
+       "build": "next build",
+       "start": "next start -p $PORT"
+     }
+   }
+   ```
 
-- As you might noticed we have a component that is shared by both `index.js` and `about.js` files, let's create that one now. Create a folder named `components` with a file named `header.js` in it and add the following code:
+   ⭐️ *In March 2019, [Heroku began running `npm run build` automatically](https://devcenter.heroku.com/changelog-items/1573), so the old `heroku-postbuild` script entry is no longer required.*
 
-```jsx
-export default () => (
-  <header>
-    <h1>Next.js Example</h1>
-  </header>
-);
-```
+1. Ensure the app is a git repo, ignoring local-only directories:
 
-- Finally in order for Next.js to be deployed we could either have a `next.config.js` or a `package.json`, for this example we are just going to create a `next.config.js` with the following code:
+   ```bash
+   git init
+   (echo node_modules/ && echo .next/) >> .gitignore
+   ```
+1. Create the Heroku app:
 
-```js
-module.exports = {
-  target: 'serverless'
-}
-```
+   ```bash
+   heroku create $APP_NAME
+   ```
+1. 🚀 Deploy:
 
-### Deploy with Now
+   ```bash
+   git add .
+   git commit -m 'Next.js app on Heroku'
+   git push heroku master
+   ```
+1. ♻️ Deploy changes: add, commit, & push again.
 
-First we need to create a `now.json` configuration file to instruct Now how to build the project.
+## Custom Config
 
-For this example we will be using our newest version [Now 2.0](https://zeit.co/now).
+Next itself supports build & runtime configuration through the [next.config.js](https://nextjs.org/docs/#exposing-configuration-to-the-server--client-side) file.
 
-By adding the `version` key to the `now.json` file, we can specify which Now Platform version to use.
-
-We also need to define each builders we would like to use. [Builders](https://zeit.co/docs/v2/deployments/builders/overview/) are modules that take a deployment's source and return an output, consisting of [either static files or dynamic Lambdas](https://zeit.co/docs/v2/deployments/builds/#sources-and-outputs).
-
-In this case we are going to use `@now/next` to build and deploy our Next.js application selecting the `next.config.js` as our entry point. We will also define a name for our project (optional).
-
-```json
-{
-    "version": 2,
-    "name": "nextjs",
-    "builds": [
-        { "src": "next.config.js", "use": "@now/next" }
-    ]
-}
-```
-
-Visit our [documentation](https://zeit.co/docs/v2/deployments/configuration) for more information on the `now.json` configuration file.
-
-We are now ready to deploy the app.
-
-```
-now
-```
+Use environment variables ([Heroku config vars](https://devcenter.heroku.com/articles/config-vars)) within your React components, no rebuilds required! Simply set [next.config.js](https://nextjs.org/docs/#exposing-configuration-to-the-server--client-side) values from the server's environment using `process.env` object.
