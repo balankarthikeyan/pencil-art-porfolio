@@ -3,28 +3,28 @@ import { css, createGlobalStyle } from 'styled-components'
 const mediaProperties = {
   desktopOrLarger: {
     screenRange: 'min-width',
-    width: 1024
+    width: 1024,
   },
   desktopOrSmaller: {
     screenRange: 'max-width',
-    width: 1366
+    width: 1366,
   },
   tabletOrLarger: {
     screenRange: 'min-width',
-    width: 768
+    width: 768,
   },
   tabletOrSmaller: {
     screenRange: 'max-width',
-    width: 1023
+    width: 1023,
   },
   phoneOrLarger: {
     screenRange: 'min-width',
-    width: 0
+    width: 0,
   },
   phoneOrSmaller: {
     screenRange: 'max-width',
-    width: 767
-  }
+    width: 767,
+  },
 }
 
 export const media = Object.keys(mediaProperties).reduce(
@@ -51,5 +51,9 @@ export const GlobalStyled = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+  }
+
+  ::selection {
+    background: transparent;
   }
 `

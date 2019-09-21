@@ -3,17 +3,14 @@ import styled, { css } from 'styled-components'
 import { Carousel } from 'react-responsive-carousel'
 import { media } from '../../styles'
 const Main = styled.div`
-  position: absolute;
-  z-index: 1;
-  left: 320px;
-  margin-left: 36px;
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  h1 {
+    font-size: 70px;
+  }
   ${media.phoneOrSmaller`
-    margin-top: 60px;
-    border-top: 10px solid #4B21FF;
-    position: relative;
-    left: unset;
-    margin-left: unset;
-    margin-bottom: 200px;
+
   `}
 `
 
@@ -21,8 +18,9 @@ const StyledCarosel = styled(Carousel)`
   ${media.phoneOrSmaller`
     width: 100%;
   `}
-  width: calc(100vw - 400px);
-  height: 60vh;
+  width: 100%;
+  height: fit-content;
+
   .carousel.carousel-slider {
     height: 100%;
     .slider-wrapper {
