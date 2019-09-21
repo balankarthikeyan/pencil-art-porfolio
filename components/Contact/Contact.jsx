@@ -88,7 +88,7 @@ const Contact = props => {
           height="41px"
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             fill="rgb(19, 19, 19)"
             d="M-0.015,24.797 L42.959,24.797 L26.705,40.992 L38.195,40.992 L58.515,20.751 L38.195,0.508 L26.705,0.508 L42.959,16.702 L-0.015,16.702 L-0.015,24.797 Z"
           />

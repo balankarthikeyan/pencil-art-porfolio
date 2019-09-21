@@ -7,13 +7,13 @@ class Portfolio extends React.PureComponent {
     super(props)
 
     this.state = {
-      portfolio: []
+      portfolio: [],
     }
   }
 
   static defaultProps = {
     className: '',
-    response: '//ntryogep.sirv.com/myresumebk/portfolio/gallary.json'
+    response: '//ntryogep.sirv.com/pencil-sketch/gallary.json',
   }
   async componentDidMount() {
     const { response } = this.props

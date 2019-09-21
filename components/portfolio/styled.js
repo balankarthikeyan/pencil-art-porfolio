@@ -6,6 +6,7 @@ const Main = styled.div`
   margin: auto;
   width: 100%;
   max-width: 1200px;
+
   h1 {
     font-size: 70px;
   }
@@ -20,6 +21,7 @@ const StyledCarosel = styled(Carousel)`
   `}
   width: 100%;
   height: fit-content;
+  margin-bottom: 80px;
 
   .carousel.carousel-slider {
     height: 100%;
@@ -31,6 +33,7 @@ const StyledCarosel = styled(Carousel)`
     }
   }
   .thumbs-wrapper {
+    display: none;
     margin-top: 0px;
   }
 `
@@ -39,7 +42,7 @@ const StyledImageKit = styled.div`
 
   img {
     width: auto !important;
-    height: 100%;
+    height: 500px;
   }
 `
 const StyledDescription = styled.p``
