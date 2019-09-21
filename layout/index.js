@@ -14,6 +14,7 @@ const GlobalStyled = createGlobalStyle`
     box-sizing: border-box;
   }
 `
+
 import { StyledFooter } from './styled'
 const Layout = ({ children, title = 'This is the default title' }) => (
   <React.Fragment>
