@@ -1,6 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "editor.formatOnSaveTimeout": 0,
+  // "editor.formatOnSaveTimeout": 0,
 
   "prettier.eslintIntegration": false,
   "prettier.tslintIntegration": false,

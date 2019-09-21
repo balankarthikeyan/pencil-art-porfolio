@@ -1,32 +1,18 @@
 import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 import { Layout } from '../layout'
+import { Portfolio } from '../components/portfolio'
+import { GlobalStyled } from '../styles'
 
-const GlobalStyled = createGlobalStyle`
-  /* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
-  body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Roboto', arial, verdana
-  }
+const HomePage = props => {
+  const { title = 'BK' } = props
 
-  * {
-    box-sizing: border-box;
-  }
-`
-class HomePage extends React.PureComponent {
-  static defaultProps = {
-    title: 'BK'
-  }
-  render() {
-    const { title } = this.props
-    return (
-      <Layout title={title}>
-        <GlobalStyled />
-        <h1> {'Hello BK!!'}</h1>
-      </Layout>
-    )
-  }
+  return (
+    <Layout title={title}>
+      <GlobalStyled />
+      <h1> {'Hello BK!!'}</h1>
+    </Layout>
+  )
 }
 
 export default HomePage

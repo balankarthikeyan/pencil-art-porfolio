@@ -1,4 +1,4 @@
-import { css } from 'styled-components'
+import { css, createGlobalStyle } from 'styled-components'
 
 const mediaProperties = {
   desktopOrLarger: {
@@ -40,3 +40,16 @@ export const media = Object.keys(mediaProperties).reduce(
   },
   {}
 )
+
+export const GlobalStyled = createGlobalStyle`
+  /* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
+  body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', arial, verdana;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+`
