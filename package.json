@@ -15,7 +15,7 @@
     "ssr",
     "server-side-rendering"
   ],
-  "author": "Mars Hall",
+  "author": "bk",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mars/heroku-nextjs/issues"
