@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/portfolio.js"],{
 
 /***/ "./components/header/fixture.js":
 /*!**************************************!*\
@@ -9023,21 +9023,21 @@ exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fbkarthikeyan%2FPersonal%2Fgithub%2FSchool%2Fnextjs%2Fpencil-art-porfolio%2Fpages%2Findex.js!./":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fbkarthikeyan%2FPersonal%2Fgithub%2FSchool%2Fnextjs%2Fpencil-art-porfolio%2Fpages%2Findex.js ***!
-  \*******************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fportfolio&absolutePagePath=%2FUsers%2Fbkarthikeyan%2FPersonal%2Fgithub%2FSchool%2Fnextjs%2Fpencil-art-porfolio%2Fpages%2Fportfolio.js!./":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fportfolio&absolutePagePath=%2FUsers%2Fbkarthikeyan%2FPersonal%2Fgithub%2FSchool%2Fnextjs%2Fpencil-art-porfolio%2Fpages%2Fportfolio.js ***!
+  \********************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var page = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/portfolio", function() {
+      var page = __webpack_require__(/*! ./pages/portfolio.js */ "./pages/portfolio.js")
       if(true) {
-        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
-          next.router.update("/", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/portfolio.js */ "./pages/portfolio.js", function() {
+          if(!next.router.components["/portfolio"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/portfolio.js */ "./pages/portfolio.js")
+          next.router.update("/portfolio", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -17930,10 +17930,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/index.js":
-/*!************************!*\
-  !*** ./pages/index.js ***!
-  \************************/
+/***/ "./pages/portfolio.js":
+/*!****************************!*\
+  !*** ./pages/portfolio.js ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -17945,82 +17945,60 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components */ "./components/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components */ "./components/index.js");
 
 
 
 
 
 
-
-var _jsxFileName = "/Users/bkarthikeyan/Personal/github/School/nextjs/pencil-art-porfolio/pages/index.js";
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n  /* @import url('https://fonts.googleapis.com/css?family=Roboto'); */\n  body {\n    margin: 0px;\n    padding: 0px;\n    font-family: 'Roboto', arial, verdana\n  }\n\n  * {\n    box-sizing: border-box;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
+var _jsxFileName = "/Users/bkarthikeyan/Personal/github/School/nextjs/pencil-art-porfolio/pages/portfolio.js";
 
 
 
-
-var GlobalStyled = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["createGlobalStyle"])(_templateObject());
-
-var HomePage =
+var PortfolioPage =
 /*#__PURE__*/
 function (_React$PureComponent) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(HomePage, _React$PureComponent);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(PortfolioPage, _React$PureComponent);
 
-  function HomePage() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, HomePage);
+  function PortfolioPage() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, PortfolioPage);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(HomePage).apply(this, arguments));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(PortfolioPage).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(HomePage, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(PortfolioPage, [{
     key: "render",
     value: function render() {
       var title = this.props.title;
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_9__["Layout"], {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_7__["Layout"], {
         title: title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 10
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(GlobalStyled, {
+      }, " ", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_7__["Portfolio"], {
+        className: title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_9__["Landing"], {
-        className: "Home",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 10
         },
         __self: this
       }));
     }
   }]);
 
-  return HomePage;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.PureComponent);
+  return PortfolioPage;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.PureComponent);
 
-Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(HomePage, "defaultProps", {
-  title: 'BK'
+Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(PortfolioPage, "defaultProps", {
+  title: 'Portfolio'
 });
 
-/* harmony default export */ __webpack_exports__["default"] = (HomePage);
+/* harmony default export */ __webpack_exports__["default"] = (PortfolioPage);
 
 /***/ }),
 
@@ -18088,14 +18066,14 @@ var media = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_
 
 /***/ }),
 
-/***/ 0:
-/*!***********************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fbkarthikeyan%2FPersonal%2Fgithub%2FSchool%2Fnextjs%2Fpencil-art-porfolio%2Fpages%2Findex.js ***!
-  \***********************************************************************************************************************************************************************/
+/***/ 2:
+/*!************************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fportfolio&absolutePagePath=%2FUsers%2Fbkarthikeyan%2FPersonal%2Fgithub%2FSchool%2Fnextjs%2Fpencil-art-porfolio%2Fpages%2Fportfolio.js ***!
+  \************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fbkarthikeyan%2FPersonal%2Fgithub%2FSchool%2Fnextjs%2Fpencil-art-porfolio%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fbkarthikeyan%2FPersonal%2Fgithub%2FSchool%2Fnextjs%2Fpencil-art-porfolio%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fportfolio&absolutePagePath=%2FUsers%2Fbkarthikeyan%2FPersonal%2Fgithub%2FSchool%2Fnextjs%2Fpencil-art-porfolio%2Fpages%2Fportfolio.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fportfolio&absolutePagePath=%2FUsers%2Fbkarthikeyan%2FPersonal%2Fgithub%2FSchool%2Fnextjs%2Fpencil-art-porfolio%2Fpages%2Fportfolio.js!./");
 
 
 /***/ }),
@@ -18111,5 +18089,5 @@ module.exports = dll_9888d6adfe882d22c773;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
-//# sourceMappingURL=index.js.map
+},[[2,"static/runtime/webpack.js","styles"]]]);
+//# sourceMappingURL=portfolio.js.map
