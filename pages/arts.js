@@ -6,13 +6,20 @@ const StyledStaticBanner = styled.img`
   width: 100%;
 `
 
+const StyledLayout = styled(Layout)`
+  header {
+    position: unset;
+  }
+`
+
 const HomePage = props => {
   const { title = 'BK' } = props
 
   return (
-    <Layout title={title}>
+    <StyledLayout title={title}>
+      <Header />
       <GridCard />
-    </Layout>
+    </StyledLayout>
   )
 }
 
