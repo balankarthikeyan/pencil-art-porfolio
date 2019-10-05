@@ -1,11 +1,18 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { configContact } from './fixture'
+import { media } from '../../styles'
 const StyledContactWrapper = styled.div`
   height: fit-content;
   width: 100%;
   display: flex;
   background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: bottom;
+  ${media.phoneOrSmaller`
+      background-image: none !important;
+    `}
 
   .contact-container-fluid {
     width: 100%;
@@ -16,9 +23,17 @@ const StyledContactWrapper = styled.div`
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
+    ${media.phoneOrSmaller`
+    flex-direction: column;
+    text-align: center;
+    `}
   }
   svg.arrow {
     margin: 0 40px;
+
+    ${media.phoneOrSmaller`
+     display: none;
+    `}
   }
   h1,
   h3,
@@ -27,9 +42,15 @@ const StyledContactWrapper = styled.div`
     padding: 0;
   }
   .contact-wrapper {
+    ${media.phoneOrSmaller`
+    align-items: center;
+    `}
     h1 {
       font-size: 70px;
       text-transform: uppercase;
+      ${media.phoneOrSmaller`
+      font-size: 15vw;
+      `}
     }
     h3 {
       font-size: 36px;
@@ -39,11 +60,18 @@ const StyledContactWrapper = styled.div`
       font-size: 16px;
       width: 370px;
       margin-top: 20px;
+      background: #ffffffc2;
+      ${media.phoneOrSmaller`
+        width: 80vw;
+      `}
     }
     display: flex;
     flex-direction: column;
   }
   .info-wrapper {
+    ${media.phoneOrSmaller`
+     margin-top: 4rem;
+    `}
     h1 {
       background: black;
       margin-bottom: 10px;
@@ -53,6 +81,11 @@ const StyledContactWrapper = styled.div`
     .social-icons {
       margin-top: 20px;
       display: flex;
+      ${media.phoneOrSmaller`
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    `}
 
       a {
         background: black;

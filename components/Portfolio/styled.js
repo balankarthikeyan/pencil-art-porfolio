@@ -9,9 +9,14 @@ const Main = styled.div`
 
   h1 {
     font-size: 70px;
+    text-transform: uppercase;
   }
   ${media.phoneOrSmaller`
-
+    h1 {
+      font-size: 40px;
+      text-align: center;
+      color: white;
+    }
   `}
 `
 

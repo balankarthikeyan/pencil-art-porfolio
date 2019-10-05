@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled, { css } from 'styled-components'
 import { fromVariantToGrid } from './deps'
+import { media } from '../../styles'
 
 /*
  * @todo only write in static colum control need fix in dynamic css control
@@ -46,6 +47,10 @@ const StyledModal = styled.div`
   img {
     width: auto;
     height: 400px;
+    ${media.phoneOrSmaller`
+    width: 32vh;
+    height: auto;
+    `}
   }
   .close-button {
     width: 100%;
@@ -56,6 +61,7 @@ const StyledModal = styled.div`
   }
 `
 const StyledGridContainer = styled.div`
+  background: white;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: 8vh;
@@ -64,6 +70,11 @@ const StyledGridContainer = styled.div`
   justify-items: stretch;
   height: 100%;
   transition: all 400ms ease;
+
+  ${media.phoneOrSmaller`
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 7vw;
+    `}
   ${({ isModalEnable }) =>
     isModalEnable &&
     `
@@ -72,7 +83,7 @@ const StyledGridContainer = styled.div`
 `
 const StyledGridItem = styled.div`
   color: #000;
-  background: #67c8ff;
+  background: white;
   font-size: 1.5rem;
   text-align: center;
   box-sizing: border-box;

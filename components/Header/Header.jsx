@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import media from '../../styles'
 const StyledHeader = styled.header`
   width: 100%;
   height: 90px;
@@ -7,6 +8,11 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   position: absolute;
+  z-index: 9;
+  ${media.phoneOrSmaller`
+    position: unset;
+    background: #dbdbdb;
+  `}
 `
 const StyledContainerFluid = styled.div`
   max-width: 1200px;
@@ -14,6 +20,10 @@ const StyledContainerFluid = styled.div`
   margin: auto;
   width: 100%;
   padding: 0 20px;
+
+  ${media.phoneOrSmaller`
+    justify-content: center;
+  `}
 `
 
 const StyledIcon = styled.div`

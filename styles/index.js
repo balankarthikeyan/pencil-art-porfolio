@@ -47,6 +47,9 @@ export const GlobalStyled = createGlobalStyle`
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', arial, verdana;
+    ${media.phoneOrSmaller`
+      background: black;
+    `}
   }
 
   * {
@@ -57,3 +60,5 @@ export const GlobalStyled = createGlobalStyle`
     background: transparent;
   }
 `
+
+export default media

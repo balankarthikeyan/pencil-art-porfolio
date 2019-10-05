@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { configAbout } from './fixture'
+import { media } from '../../styles'
 const StyledAboutWrapper = styled.div`
   height: fit-content;
   width: 100%;
@@ -16,6 +17,9 @@ const StyledAboutWrapper = styled.div`
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: center;
+    ${media.phoneOrSmaller`
+      flex-direction: column;
+    `}
   }
 
   .image-wrapper {
@@ -23,11 +27,21 @@ const StyledAboutWrapper = styled.div`
       height: auto;
       width: 600px;
       pointer-events: none;
+      ${media.phoneOrSmaller`
+        width: 100%;
+      `}
     }
+    ${media.phoneOrSmaller`
+      order: 2;
+    `}
   }
 
   .about-wrapper {
     flex-direction: column;
+    ${media.phoneOrSmaller`
+      order: 1;
+      text-align: center;
+    `}
     h1,
     h3,
     p {
@@ -48,6 +62,10 @@ const StyledAboutWrapper = styled.div`
       font-size: 16px;
       width: 370px;
       margin-top: 20px;
+      ${media.phoneOrSmaller`
+        font-size: 27px;
+        width: 61vw;
+    `}
     }
   }
   .image-wrapper,

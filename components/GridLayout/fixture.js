@@ -9,8 +9,7 @@ export const list = [
   },
   {
     variant: 3,
-    imageUrl:
-      'https://ntryogep.sirv.com/pencil-sketch/sketch/B612_20180822_194336_622.jpg',
+    imageUrl: 'https://ntryogep.sirv.com/pencil-sketch/sketch/rajini.jpg',
   },
   {
     variant: 5,
