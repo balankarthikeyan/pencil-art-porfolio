@@ -1,5 +1,5 @@
 export const fromVariantToGrid = variant => {
-  console.log('-- variant: ', variant)
+  // console.log('-- variant: ', variant)
   // const maxWidth = 100 / (variant + 1) + '%'
   switch (variant) {
     /* Extra Large */

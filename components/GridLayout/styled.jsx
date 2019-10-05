@@ -6,9 +6,54 @@ import { fromVariantToGrid } from './deps'
  * @todo only write in static colum control need fix in dynamic css control
  */
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.div.attrs({ className: 'grid' })`
   max-width: 100%;
   margin: auto;
+`
+const StyledWrapperModal = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9;
+  top: 0px;
+`
+
+const StyledModalMask = styled.div`
+  background: #000000b5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+`
+const StyledModal = styled.div`
+  position: absolute;
+  z-index: 9;
+  top: 0px;
+  background: black;
+  width: 60vw;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  img {
+    width: auto;
+    height: 400px;
+  }
+  .close-button {
+    width: 100%;
+    text-align: right;
+    font-family: 'material icons';
+    font-size: 20px;
+    color: white;
+  }
 `
 const StyledGridContainer = styled.div`
   display: grid;
@@ -18,6 +63,12 @@ const StyledGridContainer = styled.div`
   grid-gap: 8px 8px;
   justify-items: stretch;
   height: 100%;
+  transition: all 400ms ease;
+  ${({ isModalEnable }) =>
+    isModalEnable &&
+    `
+    pointer-event: none;
+  `}
 `
 const StyledGridItem = styled.div`
   color: #000;
@@ -43,4 +94,11 @@ const StyledGridItem = styled.div`
   }}
 `
 
-export { StyledGridContainer, StyledGridItem, StyledWrapper }
+export {
+  StyledGridContainer,
+  StyledGridItem,
+  StyledWrapper,
+  StyledWrapperModal,
+  StyledModal,
+  StyledModalMask,
+}
